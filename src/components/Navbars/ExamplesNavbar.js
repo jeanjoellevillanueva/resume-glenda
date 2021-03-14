@@ -23,13 +23,18 @@ import classnames from "classnames";
 
 // reactstrap components
 import {
+  Button,
   Collapse,
+  Container,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
   NavbarBrand,
   Navbar,
   NavItem,
   NavLink,
   Nav,
-  Container,
+  UncontrolledDropdown
 } from "reactstrap";
 
 function ExamplesNavbar() {
@@ -47,7 +52,7 @@ function ExamplesNavbar() {
         document.documentElement.scrollTop > 299 ||
         document.body.scrollTop > 299
       ) {
-        setNavbarColor("");
+        setNavbarColor("navbar-transparent");
       } else if (
         document.documentElement.scrollTop < 300 ||
         document.body.scrollTop < 300
@@ -69,15 +74,13 @@ function ExamplesNavbar() {
       expand="lg"
     >
       <Container>
-        <div className="navbar-translate">
+        <div className="navbar-primary">
           <NavbarBrand
             data-placement="bottom"
             to="/index"
-            target="_blank"
-            title="Coded by Creative Tim"
             tag={Link}
           >
-            Paper Kit 2
+            Glenda Ann Ranoco
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -91,6 +94,63 @@ function ExamplesNavbar() {
             <span className="navbar-toggler-bar bar3" />
           </button>
         </div>
+        <Nav>
+          <UncontrolledDropdown nav inNavbar>
+            <DropdownToggle
+              aria-expanded={false}
+              aria-haspopup={true}
+              caret
+              data-toggle="dropdown"
+              style={{ color: 'white', fontWeight: 'bold' }}
+              href="#"
+              id="dropdownMenuButton"
+              nav
+              onClick={(e) => e.preventDefault()}
+              role="button"
+            >
+              About
+            </DropdownToggle>
+            <DropdownMenu
+              aria-labelledby="dropdownMenuButton"
+              className="dropdown-info"
+            >
+              <DropdownItem
+                href="/about"
+              >
+                About Me
+              </DropdownItem>
+              <DropdownItem
+                href=""
+              >
+                Contacts
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+          <NavItem>
+            <NavLink
+              href="#"
+              style={{ color: 'white', fontWeight: 'bold' }}
+            >
+              Portfolios
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              href="#"
+              style={{ color: 'white', fontWeight: 'bold' }}
+            >
+              Services
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              href="#"
+              style={{ color: 'white', fontWeight: 'bold' }}
+            >
+              Blogs
+            </NavLink>
+          </NavItem>
+        </Nav>
         <Collapse
           className="justify-content-end"
           navbar
@@ -98,33 +158,20 @@ function ExamplesNavbar() {
         >
           <Nav navbar>
             <NavItem>
-              <NavLink to="/index" tag={Link}>
-                <i className="nc-icon nc-layout-11" /> Components
-              </NavLink>
-            </NavItem>
-            <NavItem>
               <NavLink
-                href="https://demos.creative-tim.com/paper-kit-react/#/documentation?ref=pkr-examples-navbar"
+                data-placement="bottom"
+                href="https://www.linkedin.com/in/glendaranoco/"
                 target="_blank"
+                title="Follow me on Linked In"
               >
-                <i className="nc-icon nc-book-bookmark" /> Documentation
+                <i className="fa fa-linkedin"></i>
+                <p className="d-lg-none">Linked In</p>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://twitter.com/CreativeTim?ref=creativetim"
-                target="_blank"
-                title="Follow us on Twitter"
-              >
-                <i className="fa fa-twitter" />
-                <p className="d-lg-none">Twitter</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                href="https://www.facebook.com/glendaranoco"
                 target="_blank"
                 title="Like us on Facebook"
               >
@@ -133,26 +180,14 @@ function ExamplesNavbar() {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-                target="_blank"
-                title="Follow us on Instagram"
+              <Button
+                className="btn btn-round ml-1"
+                color="default"
+                href="/index"
               >
-                <i className="fa fa-instagram" />
-                <p className="d-lg-none">Instagram</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://www.github.com/CreativeTimOfficial?ref=creativetim"
-                target="_blank"
-                title="Star on GitHub"
-              >
-                <i className="fa fa-github" />
-                <p className="d-lg-none">GitHub</p>
-              </NavLink>
+                <i class="fa fa-arrow-left mr-1"></i>
+                Back To Main Page
+              </Button>
             </NavItem>
           </Nav>
         </Collapse>
