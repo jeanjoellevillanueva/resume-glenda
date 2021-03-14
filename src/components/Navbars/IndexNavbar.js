@@ -23,12 +23,16 @@ import classnames from "classnames";
 import {
   Button,
   Collapse,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
   NavbarBrand,
   Navbar,
   NavItem,
   NavLink,
   Nav,
   Container,
+  UncontrolledDropdown
 } from "reactstrap";
 
 function IndexNavbar() {
@@ -68,8 +72,6 @@ function IndexNavbar() {
           <NavbarBrand
             data-placement="bottom"
             href="/index"
-            target="_blank"
-            title="Coded by Creative Tim"
           >
             Glenda Ann Ranoco
           </NavbarBrand>
@@ -85,6 +87,63 @@ function IndexNavbar() {
             <span className="navbar-toggler-bar bar3" />
           </button>
         </div>
+        <Nav>
+          <UncontrolledDropdown nav inNavbar>
+            <DropdownToggle
+              aria-expanded={false}
+              aria-haspopup={true}
+              caret
+              data-toggle="dropdown"
+              style={{ color: 'white', fontWeight: 'bold' }}
+              href="#"
+              id="dropdownMenuButton"
+              nav
+              onClick={(e) => e.preventDefault()}
+              role="button"
+            >
+              About
+            </DropdownToggle>
+            <DropdownMenu
+              aria-labelledby="dropdownMenuButton"
+              className="dropdown-info"
+            >
+              <DropdownItem
+                href="/about"
+              >
+                About Me
+              </DropdownItem>
+              <DropdownItem
+                href=""
+              >
+                Contacts
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+          <NavItem>
+            <NavLink
+              href="#"
+              style={{ color: 'white', fontWeight: 'bold' }}
+            >
+              Portfolios
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              href="#"
+              style={{ color: 'white', fontWeight: 'bold' }}
+            >
+              Services
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              href="#"
+              style={{ color: 'white', fontWeight: 'bold' }}
+            >
+              Blogs
+            </NavLink>
+          </NavItem>
+        </Nav>
         <Collapse
           className="justify-content-end"
           navbar
@@ -115,11 +174,12 @@ function IndexNavbar() {
             </NavItem>
             <NavItem>
               <Button
-                className="btn-round"
+                className="btn btn-round ml-1"
                 color="primary"
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=glendaranoco@gmail.com&su=Virtual Assistant&body=Hi Glenda,"
+                href="mailto:glendaranoco@gmail.com"
                 target="_blank"
               >
+                <i className="fa fa-envelope mr-1"></i>
                 Send an email
               </Button>
             </NavItem>

@@ -45,7 +45,7 @@ ReactDOM.render(
         render={(props) => <LandingPage {...props} />}
       />
       <Route
-        path="/profile-page"
+        path="/about"
         render={(props) => <ProfilePage {...props} />}
       />
       <Route

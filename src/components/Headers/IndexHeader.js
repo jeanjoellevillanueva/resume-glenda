@@ -38,7 +38,7 @@ function IndexHeader() {
         <div className="content-center">
           <Container>
             <div className="title-brand">
-              <h1 className="presentation-title">Increase Amazon Sales in 2021</h1>
+              <h1 className="presentation-title">Amazon</h1>
             </div>
             <h2 className="presentation-subtitle text-center">
               Scale Your FBA Business With Experienced Amazon Virtual Assistant

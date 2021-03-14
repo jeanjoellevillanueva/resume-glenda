@@ -20,15 +20,9 @@ import React from "react";
 
 // reactstrap components
 import {
-  Button,
-  Label,
-  FormGroup,
-  Input,
-  TabContent,
-  TabPane,
+  Col,
   Container,
   Row,
-  Col,
 } from "reactstrap";
 
 // core components
@@ -51,7 +45,7 @@ function ProfilePage() {
       <ExamplesNavbar />
       <ProfilePageHeader />
       <div className="section profile-content">
-        <Container>
+        <Container className="col-md-6">
           <div className="owner">
             <div className="avatar">
               <img
@@ -64,90 +58,108 @@ function ProfilePage() {
               <h4 className="title">
                 Glenda Ann S. Ranoco <br />
               </h4>
-              <h6 className="description">Virtual Assistant</h6>
+              <h6 className="description">Amazon Virtual Assistant</h6>
             </div>
           </div>
+          <br/>
           <Row>
-            <Col className="ml-auto mr-auto text-center" md="6">
-              <p>
-                An artist of considerable range, Jane Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.
+            <Col className="ml-auto mr-auto">
+              <p
+                style={{ fontSize: '1.5rem', fontWeight: 'bold' }}
+              >
+                Oh, Hi there! I’m Glenda Ranoco. Nice meeting you!
               </p>
-              <br />
-              <Button className="btn-round" color="default" outline>
-                <i className="fa fa-cog" /> Settings
-              </Button>
             </Col>
           </Row>
-          <br />
-          {/* Tab panes */}
-          <TabContent className="following" activeTab={activeTab}>
-            <TabPane tabId="1" id="follows">
-              <Row>
-                <Col className="ml-auto mr-auto" md="6">
-                  <ul className="list-unstyled follows">
-                    <li>
-                      <Row>
-                        <Col className="ml-auto mr-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                          />
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="7" md="4" xs="4">
-                          <h6>
-                            Flume <br />
-                            <small>Musical Producer</small>
-                          </h6>
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input
-                                defaultChecked
-                                defaultValue=""
-                                type="checkbox"
-                              />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                    <hr />
-                    <li>
-                      <Row>
-                        <Col className="mx-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/ayo-ogunseinde-2.jpg")}
-                          />
-                        </Col>
-                        <Col lg="7" md="4" xs="4">
-                          <h6>
-                            Banks <br />
-                            <small>Singer</small>
-                          </h6>
-                        </Col>
-                        <Col lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input defaultValue="" type="checkbox" />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                  </ul>
-                </Col>
-              </Row>
-            </TabPane>
-          </TabContent>
+          <br/>
+          <Row>
+            <Col className="ml-auto mr-auto">
+              <p>
+                <strong>
+                  I’m here to save you (an Amazon FBA Business Owner) from all the
+                  overflowing and unnecessary tasks that hinders you from scaling up and focusing
+                  more on the tasks that really matters to the growth of your business.
+                </strong>
+              </p>
+            </Col>
+          </Row>
+          <br/>
+          <Row>
+            <Col className="ml-auto mr-auto">
+              <p>
+                <strong>
+                  I understand that <span style={{ fontWeight: 'bold'}}> being an entrepreneur is 
+                  never easy</span>. There are hundreds of thousands of things that you need to 
+                  learn and do to succeed. But let’s be honest, it is impossible to do all at once
+                  on your own.
+                </strong>
+              </p>
+            </Col>
+          </Row>
+          <br/>
+          <Row>
+            <Col>
+              <p>
+                <strong>
+                  Are your days getting clogged up with dealing with customers? 
+                </strong>
+              </p>
+            </Col>
+          </Row>
+          <br/>
+          <Row>
+            <Col>
+              <p>
+                <strong>
+                  Do you update your inventory on your own? 
+                </strong>
+              </p>
+            </Col>
+          </Row>
+          <br/>
+          <Row>
+            <Col>
+              <p>
+                <strong>
+                  Do you spend lots of time with listing optimization and keyword research by yourself?
+                </strong>
+              </p>
+            </Col>
+          </Row>
+          <br/>
+          <Row>
+            <Col>
+              <p>
+                <strong>
+                  Well, you know what? <span style={{ fontWeight: 'bold'}}>STOP right there</span>.
+                  Wanna know why? 
+                </strong>
+              </p>
+            </Col>
+          </Row>
+          <br/>
+          <Row>
+            <Col>
+              <p>
+                <strong>
+                  Shhh. Let this be our little secret, but one of the 9 things the top 1% of Amazon
+                  sellers do is to <span style={{ fontWeight: 'bold'}}>Optimize and Delegate 
+                  Workload</span>. You should be focusing on the result driver and essential tasks,
+                  then systematize and delegate the others. 
+                </strong>
+              </p>
+            </Col>
+          </Row>
+          <br/>
+          <Row>
+            <Col>
+              <p>
+                <strong>
+                  Tada! Here’s where I step in. 
+                </strong>
+              </p>
+            </Col>
+          </Row>
         </Container>
       </div>
       <DemoFooter />

@@ -28,7 +28,7 @@ function SectionDark() {
     <>
       <div className="section section-dark">
         <Container>
-          <Row>
+          {/* <Row>
             <Col className="ml-auto mr-auto text-center" md="8">
               <h2 className="title">Completed with examples</h2>
               <p className="description">
@@ -38,7 +38,7 @@ function SectionDark() {
                 what you can built with this powerful kit.
               </p>
             </Col>
-          </Row>
+          </Row> */}
         </Container>
       </div>
     </>
